@@ -2,7 +2,17 @@
 
 A collection of productivity skills for [Claude Code](https://claude.com/claude-code) that help you work faster and learn better.
 
+**Tapestry weaves learning content into action.** Extract any content (YouTube, articles, PDFs) and automatically create implementation plans.
+
 ## Skills Included
+
+### 0. Tapestry (Master Skill) ⭐
+The unified workflow that orchestrates everything. Just say `tapestry <URL>` and it:
+1. Detects content type (YouTube, article, PDF)
+2. Extracts clean content
+3. Automatically creates a Ship-Learn-Next action plan
+
+**One command. Complete workflow. From learning to shipping.**
 
 ### 1. YouTube Transcript Downloader
 Download and clean YouTube video transcripts with automatic deduplication and readable formatting.
@@ -74,6 +84,7 @@ chmod +x install.sh
 mkdir -p ~/.claude/skills
 
 # Copy skills
+cp -r tapestry ~/.claude/skills/
 cp -r youtube-transcript ~/.claude/skills/
 cp -r article-extractor ~/.claude/skills/
 cp -r ship-learn-next ~/.claude/skills/
@@ -86,12 +97,30 @@ cp -r ship-learn-next ~/.claude/skills/
 mkdir -p .claude/skills
 
 # Copy skills
+cp -r /path/to/tapestry-skills-for-claude-code/tapestry .claude/skills/
 cp -r /path/to/tapestry-skills-for-claude-code/youtube-transcript .claude/skills/
 cp -r /path/to/tapestry-skills-for-claude-code/article-extractor .claude/skills/
 cp -r /path/to/tapestry-skills-for-claude-code/ship-learn-next .claude/skills/
 ```
 
 ## Usage
+
+### Tapestry (Recommended - Use This!)
+
+The simplest way to use Tapestry skills. One command extracts content and creates your action plan:
+
+```
+"tapestry https://www.youtube.com/watch?v=VIDEO_ID"
+"tapestry https://example.com/article"
+"tapestry https://example.com/paper.pdf"
+```
+
+The skill will:
+1. Detect content type (YouTube/article/PDF)
+2. Extract clean content
+3. Create a Ship-Learn-Next action plan automatically
+4. Save both files
+5. Ask: "When will you ship Rep 1?"
 
 ### YouTube Transcript Downloader
 
@@ -165,6 +194,29 @@ The skill will:
 - No additional requirements (uses built-in tools)
 
 ## Examples
+
+### Example 0: Tapestry Unified Workflow (Recommended)
+
+```
+User: "tapestry https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+
+Claude:
+🧵 Tapestry Workflow Starting...
+📍 Detected: youtube
+📺 Extracting YouTube transcript...
+✓ Saved transcript: Never Gonna Give You Up.txt
+
+🚀 Creating action plan...
+✓ Quest: Master Video Production Techniques
+✓ Saved plan: Ship-Learn-Next Plan - Master Video Production.md
+
+✅ Tapestry Complete!
+📥 Content: Never Gonna Give You Up.txt
+📋 Plan: Ship-Learn-Next Plan - Master Video Production.md
+
+🎯 Rep 1 (This Week): Film and edit a 60-second video
+When will you ship Rep 1?
+```
 
 ### Example 1: Download and Process a YouTube Video
 

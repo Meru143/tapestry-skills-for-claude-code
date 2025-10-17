@@ -24,6 +24,23 @@ echo ""
 echo "📦 Installing skills..."
 echo ""
 
+# Install tapestry master skill
+if [ -d "$SKILLS_DIR/tapestry" ]; then
+    echo "⚠️  tapestry skill already exists"
+    read -p "   Overwrite? (y/n) " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        rm -rf "$SKILLS_DIR/tapestry"
+        cp -r "$SCRIPT_DIR/tapestry" "$SKILLS_DIR/"
+        echo "   ✓ Updated tapestry skill"
+    else
+        echo "   ⏭️  Skipped tapestry skill"
+    fi
+else
+    cp -r "$SCRIPT_DIR/tapestry" "$SKILLS_DIR/"
+    echo "✓ Installed tapestry skill"
+fi
+
 # Install youtube-transcript skill
 if [ -d "$SKILLS_DIR/youtube-transcript" ]; then
     echo "⚠️  youtube-transcript skill already exists"
@@ -82,13 +99,15 @@ echo ""
 echo "Skills installed to: $SKILLS_DIR"
 echo ""
 echo "📚 Available skills:"
+echo "  - tapestry: 🌟 Unified workflow (extract + plan)"
 echo "  - youtube-transcript: Download YouTube transcripts"
 echo "  - article-extractor: Extract clean article content"
 echo "  - ship-learn-next: Turn content into action plans"
 echo ""
 echo "🚀 Usage:"
 echo "  Open Claude Code and start using the skills!"
-echo "  Example: 'Download transcript for [YouTube URL]'"
+echo "  Quick start: 'tapestry [URL]'"
+echo "  Example: 'tapestry https://www.youtube.com/watch?v=VIDEO_ID'"
 echo ""
 echo "📖 See README.md for more information"
 echo ""
