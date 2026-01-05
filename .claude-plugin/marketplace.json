@@ -1,0 +1,28 @@
+{
+  "name": "tapestry-skills-marketplace",
+  "owner": {
+    "name": "michalparkola"
+  },
+  "plugins": [
+    {
+      "name": "tapestry-article-extractor",
+      "description": "Extract and process articles",
+      "source": "./article-extractor"
+    },
+    {
+      "name": "tapestry-ship-learn-next",
+      "description": "Ship, learn, and iterate on projects",
+      "source": "./ship-learn-next"
+    },
+    {
+      "name": "tapestry-main",
+      "description": "Main Tapestry skill",
+      "source": "./tapestry"
+    },
+    {
+      "name": "tapestry-youtube-transcript",
+      "description": "Extract and process YouTube transcripts",
+      "source": "./youtube-transcript"
+    }
+  ]
+}

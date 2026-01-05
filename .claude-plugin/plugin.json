@@ -1,0 +1,9 @@
+{
+  "name": "tapestry-skills",
+  "version": "1.0.0",
+  "description": "Tapestry skills for Claude Code",
+  "author": {
+    "name": "michalparkola"
+  },
+  "repository": "https://github.com/michalparkola/tapestry-skills-for-claude-code"
+}
